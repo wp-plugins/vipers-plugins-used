@@ -44,7 +44,7 @@ $viperspluginsused = new viperspluginsused();
 
 See also: ["Creating your own Page Templates" article on the WP Codex](http://codex.wordpress.org/Pages#Creating_your_own_Page_Templates)
 
-**Output As A Table**
+###Output As A Table###
 
 To output a table, use this code:
 
@@ -87,7 +87,7 @@ Some example CSS:
 }`
 
 
-**Output As An Unordered List**
+###Output As An Unordered List###
 
 To output an unordered list, use this code:
 
@@ -108,7 +108,7 @@ Example code to list all plugins in a "Plugin by Author" format:
 `< ?php $viperspluginsused->output_list(TRUE, FALSE); ?>`
 
 
-**Get Count of Activated Plugins**
+###Get Count of Activated Plugins###
 
 If you'd like to display a count of how many plugins you have activated, use this code:
 

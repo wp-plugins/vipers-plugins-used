@@ -129,7 +129,9 @@ Sorry, no, I'm far too busy. I hope to make the installation process much simpli
 
 == Screenshots ==
 
-1. Screenshot of the options / debug page in the admin area
+1. Plugin's page in the admin area listing all activated plugins
+
+2. Edit displayed plugin description screen
 
 
 == Advanced Usage ==

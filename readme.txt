@@ -22,30 +22,28 @@ Upload `vipers_pluginsused.php` to your `/wp-content/plugins/` folder and activa
 
 In order to display your plugins list, you'll have to use a custom Page template. Unfortunately, this is not the easiest thing in the world to do for a novice user. I have plans to make the installation process much, much easier in the future by switching to placeholders and/or BBCode, but for now, you'll have to follow these instructions. But don't worry, they should be simple to follow.
 
-http://codex.wordpress.org/Pages#Creating_your_own_Page_Templates
-
 1. Browse to your theme's folder (`/wp-content/themes/[theme name]/`) and download `page.php` (if it doesn't exist, use `index.php`).
 
 2. Rename the file to something like `page_pluginsused.php` and open it up with a text editor. See [the WordPress Codex](http://codex.wordpress.org/Editing_Files) if you need help doing this. You can also just upload the file now if you wish and [edit it via the admin area](http://codex.wordpress.org/Editing_Files#Using_the_File_Editor).
 
 3. Add the following to the top of the file to give the new Page template a name and to initiate the plugin:
 
-`<?php
+`&lt;?php
 /*
 Template Name: Plugins Used
 */
 $viperspluginsused = new viperspluginsused();
-?>`
+?gt;`
 
 4. Find the `the_content()` call. We will be adding the plugin list output after this.
 
+See also: ["Creating your own Page Templates" article on the WP Codex](http://codex.wordpress.org/Pages#Creating_your_own_Page_Templates)
 
-Output As A Table
-=================
+**Output As A Table**
 
 To output a table, use this code:
 
-`<?php $viperspluginsused->output_table(); ?>`
+`&lt;?php $viperspluginsused->output_table(); ?gt;`
 
 The function parameters are:
 
@@ -59,7 +57,7 @@ The function parameters are:
 
 Example code to list all plugins in a "[ Plugin | Author ]" format with a table ID of "pluginstable":
 
-`<?php $viperspluginsused->output_table('id="pluginstable"', FALSE, FALSE); ?>`
+`&lt;?php $viperspluginsused->output_table('id="pluginstable"', FALSE, FALSE); ?gt;`
 
 Besides the overall table's ID/class/whatever which you can control via the function parameters, additional classes are placed into the table automatically:
 
@@ -84,12 +82,11 @@ Some example CSS:
 }`
 
 
-Output As A Table
-=================
+**Output As An Unordered List**
 
 To output an unordered list, use this code:
 
-`<?php $viperspluginsused->output_list(); ?>`
+`&lt;?php $viperspluginsused->output_list(); ?gt;`
 
 The parameters are:
 
@@ -103,21 +100,21 @@ The parameters are:
 
 Example code to list all plugins in a "Plugin by Author" format:
 
-`<?php $viperspluginsused->output_list(TRUE, FALSE); ?>`
+`&lt;?php $viperspluginsused->output_list(TRUE, FALSE); ?gt;`
 
 
-Get Count of Activated Plugins
-==============================
+**Get Count of Activated Plugins**
 
 If you'd like to display a count of how many plugins you have activated, use this code:
 
-`<?php echo $viperspluginsused->plugincount(); ?>`
+`&lt;?php echo $viperspluginsused->plugincount(); ?gt;`
 
 Note that YOU MUST ECHO THIS as this function only returns the value, it does not display it. This is so that you can use it within PHP code if you wish.
 
 Example usage:
 
-`I currently have <?php echo $viperspluginsused->plugincount(); ?> plugins activated on my site.`
+`I currently have &lt;?php echo $viperspluginsused->plugincount(); ?gt;
+plugins activated on my site.`
 
 
 == Frequently Asked Questions ==
@@ -146,13 +143,19 @@ That'll return an array in this format:
 (
     [Viper's Plugins Used] => Array
 	(
-	    [plugin_uri] => http://www.viper007bond.com/wordpress-plugins/vipers-plugins-used/
-	    [description] => Allows you to display alphabetically what plugins you have enabled on your blog in either a table or unordered list.
+	    [plugin_uri] => http://www.viper007bond.com/wordpress-plu
+gins/vipers-plugins-used/
+	    [description] => Allows you to display alphabetically
+what plugins you have enabled on your blog in either a table or
+unordered list.
 	    [author_name] => Viper007Bond
 	    [author_uri] => http://www.viper007bond.com/
 	    [version] => 1.0
-	    [plugin] => <a href="http://www.viper007bond.com/wordpress-plugins/vipers-plugins-used/" title="Visit plugin homepage">Viper&#8217;s Plugins Used</a>
-	    [author] => <a href="http://www.viper007bond.com/" title="Visit author homepage">Viper007Bond</a>
+	    [plugin] => <a href="http://www.viper007bond.com/wordpres
+s-plugins/vipers-plugins-used/" title="Visit plugin homepage">Viper&#
+8217;s Plugins Used</a>
+	    [author] => <a href="http://www.viper007bond.com/" title=
+"Visit author homepage">Viper007Bond</a>
 	    [filename] => vipers_pluginsused.php
 	)
 
@@ -163,4 +166,4 @@ There is also this data array:
 
 `$viperspluginsused->customdata;`
 
-It's the same as `plugindata`, but if a custom description exists for the plugin, then that description is used.
+It's the same as `$viperspluginsused->plugindata`, but if a custom description exists for the plugin, then that description is used.

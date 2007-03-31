@@ -14,10 +14,12 @@ Ever want to show your readers what plugins you have enabled on your site? If so
 
 To see it in action, check out [the author's website](http://www.viper007bond.com/about/plugins-used/).
 
-_Last Updated: September 15th, 2005_
-_This plugin **is** compatible with the WordPress 2.1.x line._
+_Last Updated: September 15th, 2005
+This plugin **is** compatible with WordPress 2.1.x_
 
 == Installation ==
+
+_**NOTE**: Due to issues with the WP.org Extend area, I have had to use `< ?php` for code. Please remove the space from within that code._
 
 Upload `vipers_pluginsused.php` to your `/wp-content/plugins/` folder and activate it from the admin area.
 
@@ -29,12 +31,14 @@ In order to display your plugins list, you'll have to use a custom Page template
 
 3. Add the following to the top of the file to give the new Page template a name and to initiate the plugin:
 
-`&lt;?php
+`
+< ?php
 /*
 Template Name: Plugins Used
 */
 $viperspluginsused = new viperspluginsused();
-?gt;`
+?>
+`
 
 4. Find the `the_content()` call. We will be adding the plugin list output after this.
 
@@ -44,21 +48,21 @@ See also: ["Creating your own Page Templates" article on the WP Codex](http://co
 
 To output a table, use this code:
 
-`&lt;?php $viperspluginsused->output_table(); ?gt;`
+`< ?php $viperspluginsused->output_table(); ?>`
 
 The function parameters are:
 
-* Table Properties (default is: width="100%" border="1" cellpadding="3" cellspacing="3") -- the other properties of the <table> tag. Set to a space if you want no other properties. Example value: id="pluginstable" which results in <table id="pluginstable">
+* Table Properties (default is: `width="100%" border="1" cellpadding="3" cellspacing="3"`) -- the other properties of the <table> tag. Set to a space if you want no other properties. Example value: id="pluginstable" which results in <table id="pluginstable">
 
-* Display Description (default = TRUE) -- makes a column for the plugin descriptions and outputs them
+* Display Description (default = `TRUE`) -- makes a column for the plugin descriptions and outputs them
 
-* Display Version (default = TRUE) -- makes a column for the plugin versions and outputs them
+* Display Version (default = `TRUE`) -- makes a column for the plugin versions and outputs them
 
-* Display Author (default = TRUE) -- makes a column for the plugin authors and outputs them
+* Display Author (default = `TRUE`) -- makes a column for the plugin authors and outputs them
 
-Example code to list all plugins in a "[ Plugin | Author ]" format with a table ID of "pluginstable":
+Example code to list all plugins in a `[ Plugin | Author ]` format with a table ID of "pluginstable":
 
-`&lt;?php $viperspluginsused->output_table('id="pluginstable"', FALSE, FALSE); ?gt;`
+`< ?php $viperspluginsused->output_table('id="pluginstable"', FALSE, FALSE); ?>`
 
 Besides the overall table's ID/class/whatever which you can control via the function parameters, additional classes are placed into the table automatically:
 
@@ -87,34 +91,34 @@ Some example CSS:
 
 To output an unordered list, use this code:
 
-`&lt;?php $viperspluginsused->output_list(); ?gt;`
+`< ?php $viperspluginsused->output_list(); ?>`
 
 The parameters are:
 
-* Display ULs (default = TRUE) -- outputs the <ul>'s needed. You can turn this off if you want to add other items to the list or whatever. Note that if you turn it off, you'll need to use your own <ul> tags.
+* Display ULs (default = `TRUE`) -- outputs the `<ul>`'s needed. You can turn this off if you want to add other items to the list or whatever. Note that if you turn it off, you'll need to use your own `<ul>` tags.
 
-* Display Version (default = TRUE) -- outputs the plugin's version
+* Display Version (default = `TRUE`) -- outputs the plugin's version
 
-* Display Author (default = TRUE) -- outputs the author's name, as a link if an author URL exists
+* Display Author (default = `TRUE`) -- outputs the author's name, as a link if an author URL exists
 
-* Display Description (default = FALSE) -- outputs the description of the plugin
+* Display Description (default = `FALSE`) -- outputs the description of the plugin
 
 Example code to list all plugins in a "Plugin by Author" format:
 
-`&lt;?php $viperspluginsused->output_list(TRUE, FALSE); ?gt;`
+`< ?php $viperspluginsused->output_list(TRUE, FALSE); ?>`
 
 
 **Get Count of Activated Plugins**
 
 If you'd like to display a count of how many plugins you have activated, use this code:
 
-`&lt;?php echo $viperspluginsused->plugincount(); ?gt;`
+`< ?php echo $viperspluginsused->plugincount(); ?>`
 
 Note that YOU MUST ECHO THIS as this function only returns the value, it does not display it. This is so that you can use it within PHP code if you wish.
 
 Example usage:
 
-`I currently have &lt;?php echo $viperspluginsused->plugincount(); ?gt;
+`I currently have < ?php echo $viperspluginsused->plugincount(); ?>
 plugins activated on my site.`
 
 

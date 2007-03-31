@@ -14,7 +14,8 @@ Ever want to show your readers what plugins you have enabled on your site? If so
 
 To see it in action, check out [the author's website](http://www.viper007bond.com/about/plugins-used/).
 
-_Last Updated: September 15th, 2005 (this plugin is compatible with the WordPress 2.1 line)_
+_Last Updated: September 15th, 2005_
+_This plugin **is** compatible with the WordPress 2.1.x line._
 
 == Installation ==
 

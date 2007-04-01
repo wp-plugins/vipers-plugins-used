@@ -14,8 +14,9 @@ Ever want to show your readers what plugins you have enabled on your site? If so
 
 To see it in action, check out [the author's website](http://www.viper007bond.com/about/plugins-used/).
 
-_Last Updated: September 15th, 2005
-This plugin **is** compatible with WordPress 2.1.x_
+_Last Updated: September 15th, 2005_
+
+_This plugin **is** compatible with W_ordPress 2.1.x_
 
 == Installation ==
 
@@ -31,14 +32,12 @@ In order to display your plugins list, you'll have to use a custom Page template
 
 3. Add the following to the top of the file to give the new Page template a name and to initiate the plugin:
 
-`
-< ?php
+`< ?php
 /*
 Template Name: Plugins Used
 */
 $viperspluginsused = new viperspluginsused();
-?>
-`
+?>`
 
 4. Find the `the_content()` call. We will be adding the plugin list output after this.
 
@@ -157,8 +156,8 @@ unordered list.
 	    [author_uri] => http://www.viper007bond.com/
 	    [version] => 1.0
 	    [plugin] => <a href="http://www.viper007bond.com/wordpres
-s-plugins/vipers-plugins-used/" title="Visit plugin homepage">Viper&#
-8217;s Plugins Used</a>
+s-plugins/vipers-plugins-used/" title="Visit plugin homepage">Vip
+er&#8217;s Plugins Used</a>
 	    [author] => <a href="http://www.viper007bond.com/" title=
 "Visit author homepage">Viper007Bond</a>
 	    [filename] => vipers_pluginsused.php

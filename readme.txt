@@ -16,11 +16,11 @@ To see it in action, check out [the author's website](http://www.viper007bond.co
 
 _Last Updated: September 15th, 2005_
 
-_This plugin **is** compatible with W_ordPress 2.1.x_
+_This plugin **is** compatible with WordPress 2.1.x_
 
 == Installation ==
 
-_**NOTE**: Due to issues with the WP.org Extend area, I have had to use `< ?php` for code. Please remove the space from within that code._
+_**NOTE**: Due to issues with the WP.org Extend area, I have had to use `< ?php` in the code. **Please remove the space located before the question mark.**_
 
 Upload `vipers_pluginsused.php` to your `/wp-content/plugins/` folder and activate it from the admin area.
 

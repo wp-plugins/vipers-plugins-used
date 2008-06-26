@@ -3,7 +3,6 @@ Contributors: Viper007Bond
 Donate link: http://www.viper007bond.com/donate/
 Tags: statistics, plugins, 
 Requires at least: 1.5.2
-Tested up to: 2.3
 Stable tag: 1.12
 
 Allows you to display alphabetically what plugins you have enabled on your blog in either a table or unordered list. Also allows you to set custom descriptions for the plugins in the output.
@@ -14,7 +13,7 @@ Ever want to show your readers what plugins you have enabled on your site? If so
 
 To see it in action, check out [the author's website](http://www.viper007bond.com/about/plugins-used/).
 
-_Last Updated: September 15th, 2005 (this plugin is compatible with the WordPress 2.1 line)_
+_Last Updated: September 15th, 2005_
 
 == Installation ==
 
